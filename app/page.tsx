@@ -9,7 +9,7 @@ export default function Home() {
           Safely exchange environment variables
         </h2>
         <p className="">
-          Safeguarded within your browser, your document undergoes encryption
+          Safeguarded within your browser, your secret undergoes encryption
           prior to storage for a restricted duration, ensuring secure read
           operations. Rest assured, unencrypted data remains exclusively within
           your browser environment.
