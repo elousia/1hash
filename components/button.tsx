@@ -11,7 +11,7 @@ export default function Button({
     <button
       type="button"
       {...props}
-      className={`px-6 flex items-center text-sm bg-[#f3f1f1] hover:bg-[#e8e8e8]  transition-all duration-150 ease-in-out py-3 rounded-full ${classes}`}
+      className={`px-6 flex items-center text-sm bg-[#eeeeee] hover:bg-[#e8e8e8] transition-all duration-150 ease-in-out py-3 rounded-md ${classes}`}
     >
       {children}
     </button>
