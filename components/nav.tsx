@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const SECTION_DATA = [
   { label: "Home", href: "/", x: "100%" },
-  { label: "Encrypt", href: "/node-streaming", x: "38%" },
-  { label: "Decrypt", href: "/node", x: "0%" },
+  { label: "Encrypt", href: "/encrypt", x: "38%" },
+  { label: "Decrypt", href: "/decrypt", x: "0%" },
   { label: "About", href: "/about", x: "0%" },
   {
     label: "Source Code",

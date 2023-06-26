@@ -68,7 +68,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <main className="">{children}</main>
+          <main className="px-4 sm:px-0">{children}</main>
         </Provider>
       </body>
     </html>

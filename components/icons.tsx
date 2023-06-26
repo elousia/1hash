@@ -21,6 +21,7 @@ import {
   Image,
   KeyRound,
   Laptop,
+  Loader,
   Loader2,
   LucideProps,
   Moon,
@@ -32,10 +33,12 @@ import {
   ScrollText,
   Search,
   Settings,
+  Share2,
   SunMedium,
   Terminal,
   Trash,
   Twitter,
+  UploadCloud,
   User,
   Wallet,
   Waves,
@@ -60,7 +63,8 @@ export const Icons = {
     </svg>
   ),
   close: X,
-  spinner: Loader2,
+  spinner: Loader,
+  spinner2: Loader2,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   trash: Trash,
@@ -99,6 +103,8 @@ export const Icons = {
   download: DownloadCloud,
   scrollText: ScrollText,
   key: KeyRound,
+  upload: UploadCloud,
+  share: Share2,
   system: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
