@@ -50,10 +50,10 @@ export default function Decrypt() {
               // onSubmit();
             }}
           >
-            <div className="px-3 py-2 mt-8 border rounded border-zinc-600 focus-within:border-zinc-100/80 focus-within:ring-0 ">
+            <div className="px-3 py-2 mt-8 border rounded border-zinc-600 focus-within:ring-0">
               <label
                 htmlFor="id"
-                className="block text-xs font-medium text-left text-zinc-600"
+                className="block text-xs font-medium text-left text-zinc-500"
               >
                 ID
               </label>

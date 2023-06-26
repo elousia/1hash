@@ -83,6 +83,7 @@ body {
   color: var(--accents-4);
   padding: 0 var(--root-padding);
   background-image: url(/bg-light.png);
+  z-index: -1;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
