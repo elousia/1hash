@@ -8,9 +8,9 @@ const SECTION_DATA = [
   { label: "Home", href: "/", x: "100%" },
   { label: "Encrypt", href: "/encrypt", x: "38%" },
   { label: "Decrypt", href: "/decrypt", x: "0%" },
-  { label: "About", href: "/about", x: "0%" },
+  { label: "Profile", href: "/profile", x: "0%" },
   {
-    label: "Source Code",
+    label: "GitHub",
     href: "https://github.com/lucky-chap/1hash",
     x: "0%",
   },

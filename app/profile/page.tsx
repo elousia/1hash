@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import Button from "@/components/button";
 import { Icons } from "@/components/icons";
-import Link from "next/link";
 
-export default function Home() {
+export default function Profile() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
 
   async function passageAuthentication() {
     try {
@@ -15,15 +14,17 @@ export default function Home() {
       const data = await response.json();
 
       //console.log("data", data)
-      const { isAuthorized } = data;
+      const { isAuthorized, username } = data;
 
       if (isAuthorized) {
         setLoggedIn(true);
+        setUsername(username);
         console.log("User is authorized: ", isAuthorized);
       } else {
         // User is not authorized
         //console.log('User is not authorized with appID:', appID);
         setLoggedIn(false);
+        window.location.href = "/";
       }
     } catch (error) {
       // Handle the error
@@ -56,34 +57,31 @@ export default function Home() {
     };
   }, []);
 
+  const handleLogout = async () => {
+    document.cookie = "psg_auth_token=; max-age=0; path=/;";
+    window.location.href = "/";
+  };
+
   return (
-    <section className="flex flex-col items-center justify-center max-w-3xl px- mx-auto sm:min-h-screen sm:px-0">
-      <div className="text-center mt-24 sm:mt-0 lg:-mt-16">
-        <h2 className="py-4 text-5xl font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-7xl">
-          Safely exchange environment variables
-        </h2>
-        <p className="">
-          Safeguarded within your browser, your secret undergoes encryption
-          prior to storage for a restricted duration, ensuring secure read
-          operations. Rest assured, unencrypted data remains exclusively within
-          your browser environment.
-        </p>
-        {loggedIn ? (
-          <Link href={"/encrypt"} className="my-7 flex justify-center">
-            <Button>
-              <Icons.key className="mr-2 h-4 w-4" />
-              Encrypt documents
-            </Button>
-          </Link>
-        ) : (
-          <Link href={"/login"} className="my-7 flex justify-center">
-            <Button>
-              <Icons.key className="mr-2 h-4 w-4" />
-              Continue with Passage
-            </Button>
-          </Link>
-        )}
+    <div className="flex flex-col mx-auto max-w-3xl items-center w-full h-full mt-8">
+      <h2 className="py-4 text-5xl w-full font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-5xl">
+        Profile
+      </h2>
+
+      <p className="text-zinc-400">
+        You are logged in as: <span className="font-semibold">{username}</span>
+      </p>
+
+      <div className="mx-auto max-w-xl">
+        <Button
+          classes={`w-full flex items-center justify-center mt-6`}
+          type="button"
+          onClick={handleLogout}
+        >
+          <Icons.logout className="h-4" aria-hidden="true" />
+          <span className="inline-block ml-1">Log out of session</span>
+        </Button>
       </div>
-    </section>
+    </div>
   );
 }

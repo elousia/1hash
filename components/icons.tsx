@@ -23,6 +23,7 @@ import {
   Laptop,
   Loader,
   Loader2,
+  LogOut,
   LucideProps,
   Moon,
   Monitor,
@@ -38,6 +39,7 @@ import {
   Terminal,
   Trash,
   Twitter,
+  Unlock,
   UploadCloud,
   User,
   Wallet,
@@ -105,6 +107,8 @@ export const Icons = {
   key: KeyRound,
   upload: UploadCloud,
   share: Share2,
+  logout: LogOut,
+  unlock: Unlock,
   system: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

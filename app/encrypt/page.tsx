@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toBase58 } from "@/lib/utils";
 import { encrypt } from "@/modules/encryption";
 import { encodeCompositeKey } from "@/modules/encoding";
@@ -12,6 +12,8 @@ import { Fragment } from "react";
 import { errorToast, successToast } from "@/components/toasts";
 
 export default function Encrypt() {
+  const [username, setUserName] = useState("");
+
   const [text, setText] = useState(
     "DATABASE_URL=postgres://postgres:postgres@localhost:5432/postgres"
   );
@@ -57,6 +59,53 @@ export default function Encrypt() {
       setLoading(false);
     }
   };
+
+  async function passageAuthentication() {
+    try {
+      const response = await fetch("/api/v1/user/auth");
+      const data = await response.json();
+
+      //console.log("data", data)
+      const { isAuthorized } = data;
+      if (isAuthorized) {
+        console.log("userData", data);
+      } else {
+        // User is not authorized
+        //console.log('User is not authorized with appID:', appID);
+        window.location.href = "/";
+      }
+    } catch (error) {
+      // Handle the error
+      console.error("Error occurred while checking authorization:", error);
+    }
+  }
+
+  useEffect(() => {
+    console.log("inside useEffect");
+    require("@passageidentity/passage-elements/passage-auth");
+    const fetchDataAndAuthenticate = async () => {
+      try {
+        setLoading(true);
+        await passageAuthentication(); // Assuming passageAuthentication is an async function
+        setLoading(false);
+      } catch (error) {
+        // Handle any errors that occur during passageAuthentication or fetchData
+        setLoading(false); // Set loading to false even if an error occurs
+        console.error(error);
+      }
+    };
+
+    fetchDataAndAuthenticate(); // Call the function to fetch data and authenticate when the component mounts
+
+    const clearLocalStorage = () => {
+      localStorage.clear();
+    };
+
+    window.addEventListener("beforeunload", clearLocalStorage);
+    return () => {
+      window.removeEventListener("beforeunload", clearLocalStorage);
+    };
+  }, []);
 
   return (
     <>

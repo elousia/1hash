@@ -93,7 +93,10 @@ export default function Decrypt() {
                 {loading ? (
                   <Icons.spinner className="w-5 h-5 animate-spin" />
                 ) : (
-                  "Decrypt"
+                  <>
+                    <Icons.unlock className="w-4 h-4 mr-1" />
+                    Decrypt
+                  </>
                 )}
               </Button>
             </div>

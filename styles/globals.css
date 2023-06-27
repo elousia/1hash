@@ -15,10 +15,12 @@
   }
 }
 
-/* pre {
-  resize: vertical;
-  max-height: 200px;
-} */
+/* passage button */
+#passage-auth-container .button,
+#passage-profile-container .button {
+  background-color: #eeeeee !important;
+  display: none;
+}
 
 ::-moz-selection {
   background-color: #8884d8;

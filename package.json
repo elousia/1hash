@@ -10,12 +10,17 @@
     "ngrok": "ngrok http 3000"
   },
   "dependencies": {
+    "@passageidentity/passage-auth": "^0.1.0-beta.28",
+    "@passageidentity/passage-elements": "^1.9.3",
+    "@passageidentity/passage-node": "^2.3.2",
+    "@supabase/supabase-js": "^2.26.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@upstash/redis": "^1.21.0",
     "autoprefixer": "10.4.14",
     "base-x": "^4.0.0",
+    "cookies": "^0.8.0",
     "eslint": "8.42.0",
     "eslint-config-next": "^12.0.4",
     "framer-motion": "^10.12.16",
@@ -30,6 +35,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@types/cookies": "^0.7.7",
     "ngrok": "^5.0.0-beta.2"
   }
 }
