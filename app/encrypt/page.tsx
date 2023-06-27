@@ -172,7 +172,7 @@ export default function Encrypt() {
                 onSubmit();
               }}
             >
-              <pre className="px-4 py-3 mt-8 max-h-96 overflow-y-scroll font-mono w-full text-left bg-transparent border rounded border-zinc-400 focus:border-zinc-100/80 focus:ring-0 sm:text-sm text-zinc-100">
+              <pre className="px-4 py-3 mt-8 max-h-96 overflow-scroll font-mono w-full text-left bg-transparent border rounded border-zinc-400 focus:border-zinc-100/80 focus:ring-0 sm:text-sm text-zinc-100">
                 <div className="flex items-start px-1 text-sm w-full">
                   <div
                     aria-hidden="true"
@@ -196,7 +196,7 @@ export default function Encrypt() {
                     onChange={(e) => setText(e.target.value)}
                     rows={Math.max(10, text.split("\n").length)}
                     placeholder="DATABASE_URL=postgres://postgres:postgres@localhost:5432/postgres"
-                    className="w-full p-0 text-base bg-transparent border-0 appearance-none resize-none hover:resize text-zinc-600 focus:outline-none placeholder-zinc-500 focus:ring-0 sm:text-sm"
+                    className="w-full p-0 text-base bg-transparent overflow-x-scroll border-0 appearance-none resize-none hover:resize text-zinc-600 focus:outline-none placeholder-zinc-500 focus:ring-0 sm:text-sm"
                   />
                 </div>
               </pre>
