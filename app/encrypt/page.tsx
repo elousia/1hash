@@ -41,6 +41,9 @@ export default function Encrypt() {
 
       const { id } = (await fetch("/api/v1/store", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           ttl: ttl * ttlMultiplier,
           reads,
