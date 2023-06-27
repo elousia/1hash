@@ -123,7 +123,7 @@ export default function Decrypt() {
                 </span>
               </Button>
 
-              <Link href={"/encrypt"} className="ml-1">
+              <Link passHref href={"/encrypt"} className="ml-1">
                 <Button>
                   <Icons.key className="mr-2 h-4 w-4" />
                   Encrypt

@@ -35,6 +35,10 @@ export default function Encrypt() {
 
       const { encrypted, iv, key } = await encrypt(text);
 
+      if (reads === undefined) {
+        setReads(0);
+      }
+
       const { id } = (await fetch("/api/v1/store", {
         method: "POST",
         body: JSON.stringify({
