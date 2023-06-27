@@ -23,7 +23,7 @@ export default function SignIn() {
     require("@passageidentity/passage-elements/passage-auth");
 
     const getEnv = async () => {
-      const response = await fetch("/api/v1/env/get");
+      const response = await fetch("/api/env");
       const data = await response.json();
       setPassageCredentials(data);
     };

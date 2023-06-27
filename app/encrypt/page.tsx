@@ -39,7 +39,7 @@ export default function Encrypt() {
         setReads(0);
       }
 
-      const { id } = (await fetch("/api/v1/store", {
+      const { id } = (await fetch("/api/store", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,10 +69,10 @@ export default function Encrypt() {
 
   async function passageAuthentication() {
     try {
-      const response = await fetch("/api/v1/user/auth");
+      const response = await fetch("/api/auth");
       const data = await response.json();
 
-      //console.log("data", data)
+      console.log("data", data);
       const { isAuthorized } = data;
       if (isAuthorized) {
         console.log("userData", data);

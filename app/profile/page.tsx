@@ -10,7 +10,7 @@ export default function Profile() {
 
   async function passageAuthentication() {
     try {
-      const response = await fetch("/api/v1/user/auth");
+      const response = await fetch("/api/auth");
       const data = await response.json();
 
       //console.log("data", data)

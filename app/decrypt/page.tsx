@@ -35,7 +35,7 @@ export default function Decrypt() {
       }
 
       const { id, encryptionKey, version } = decodeCompositeKey(compositeKey);
-      const res = await fetch(`/api/v1/load?id=${id}`);
+      const res = await fetch(`/api/load?id=${id}`);
       if (!res.ok) {
         errorToast(await res.text());
         throw new Error(await res.text());
