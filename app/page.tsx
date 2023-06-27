@@ -69,14 +69,14 @@ export default function Home() {
           your browser environment.
         </p>
         {loggedIn ? (
-          <Link href={"/encrypt"} className="my-7 flex justify-center">
+          <Link passHref href={"/encrypt"} className="my-7 flex justify-center">
             <Button>
               <Icons.key className="mr-2 h-4 w-4" />
               Encrypt documents
             </Button>
           </Link>
         ) : (
-          <Link href={"/login"} className="my-7 flex justify-center">
+          <Link passHref href={"/login"} className="my-7 flex justify-center">
             <Button>
               <Icons.key className="mr-2 h-4 w-4" />
               Continue with Passage

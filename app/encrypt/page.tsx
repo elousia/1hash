@@ -330,9 +330,10 @@ export default function Encrypt() {
                     </p>
                   </li>
                   <p>
-                    Upon clicking the "Generate secret" button, a novel
-                    symmetric key will be generated. Subsequently, your data
-                    will be encrypted and solely the encrypted data will be
+                    Upon clicking the{" "}
+                    <span className="font-medium">Generate secret</span> button,
+                    a novel symmetric key will be generated. Subsequently, your
+                    data will be encrypted and solely the encrypted data will be
                     transmitted to the server.
                   </p>
                 </ul>
