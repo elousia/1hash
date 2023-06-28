@@ -64,7 +64,7 @@ export default function Decrypt() {
   };
 
   return (
-    <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-screen sm:px-0">
+    <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-[85vh] sm:px-0">
       <div className="text-center mt-10 w-full">
         <h2 className="py-4 text-5xl w-full font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-5xl">
           Decrypt
@@ -160,7 +160,7 @@ export default function Decrypt() {
             <div className="mt-10">
               <Button
                 type="submit"
-                classes={`w-1/2 mx-auto flex items-center text-center justify-center ${
+                classes={`w-full sm:w-1/2 mx-auto flex items-center text-center justify-center ${
                   loading ? "animate-pulse" : ""
                 }`}
               >

@@ -57,12 +57,12 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center max-w-3xl px- mx-auto sm:min-h-screen sm:px-0">
+    <section className="flex flex-col items-center justify-center max-w-3xl px- mx-auto sm:min-h-[85vh] sm:px-0">
       <div className="text-center mt-24 sm:mt-0 lg:-mt-28">
-        <h2 className="py-4 text-5xl font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-7xl">
+        <h2 className="py-4 text-4xl xs:text-5xl font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-7xl">
           Safely exchange environment variables
         </h2>
-        <p className="">
+        <p className="text-sm xs:text-base">
           Safeguarded within your browser, your secret undergoes encryption
           prior to storage for a restricted duration, ensuring secure read
           operations. Rest assured, unencrypted data remains exclusively within

@@ -118,7 +118,7 @@ export default function Encrypt() {
     <>
       {error ? errorToast(error) : null}
 
-      <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-screen sm:px-0 overflow-scroll">
+      <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-[85vh] sm:px-0">
         {link ? (
           <div className="flex flex-col mx-auto max-w-3xl items-center justify-center w-full h-full mt-8 md:mt-16 xl:mt-32">
             <h2 className="py-4 text-5xl w-full font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-5xl">
@@ -293,7 +293,7 @@ export default function Encrypt() {
                   </div>
                 </div>
               </div>
-              <div className="w-2/4 mx-auto">
+              <div className="sm:w-2/4 mx-auto">
                 <Button
                   classes={`w-full flex items-center justify-center ${
                     text.length <= 0 ? "cursor-not-allowed" : ""
