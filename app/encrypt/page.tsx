@@ -118,7 +118,7 @@ export default function Encrypt() {
     <>
       {error ? errorToast(error) : null}
 
-      <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-screen sm:px-0">
+      <section className="flex flex-col items-center max-w-4xl justify-start mx-auto w-full sm:min-h-screen sm:px-0 overflow-scroll">
         {link ? (
           <div className="flex flex-col mx-auto max-w-3xl items-center justify-center w-full h-full mt-8 md:mt-16 xl:mt-32">
             <h2 className="py-4 text-5xl w-full font-bold tracking-tight capitalize text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-900/20 to-zinc-600/50 sm:text-5xl">
@@ -315,7 +315,7 @@ export default function Encrypt() {
                 </Button>
               </div>
 
-              <div className="mt-16 text-left">
+              <div className="my-16 text-left">
                 <ul className="space-y-2 text-xs text-zinc-500">
                   <li>
                     <p>
