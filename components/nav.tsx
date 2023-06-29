@@ -11,7 +11,7 @@ const SECTION_DATA = [
   { label: "Profile", href: "/profile", x: "0%" },
   {
     label: "GitHub",
-    href: "https://github.com/lucky-chap/1hash",
+    href: "https://github.com/elousia/1hash",
     x: "0%",
   },
 ];
